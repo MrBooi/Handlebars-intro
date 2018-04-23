@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var userDataElem = document.querySelector('.userData');
 
-  userDataElem.innerHTML = userTemplate({
-    username: "MrBooi",
-    firstName: "Ayabonga",
-    lastName: "Booi",
-    email: "ayabongabooi2@gmail.com"
-  });
+  var userData = { users: [
+         {username: "MrBooi", firstName: "Ayabonga", lastName: "Booi", email: "ayabongabooi2@gmail.com" },
+         {username: "Nong", firstName: "Matome", lastName: "Nong", email: "matomenong@gmail.com" },
+         {username: "ryan", firstName: "Ryan", lastName: "Carson", email: "ryan@test.com" }
+       ]};
 
-
+       var userDataHTML = userTemplate(userData);
+    userDataElem.innerHTML = userDataHTML;
 
 });
